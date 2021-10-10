@@ -33,7 +33,6 @@ pycodestyle==2.7.0
 pygame==2.0.0
 pyinstaller==4.0
 pyinstaller-hooks-contrib==2020.10
-pyodbc==4.0.31
 PyQt5==5.15.1
 PyQt5-sip==12.8.1
 pyqtgraph==0.12.2
