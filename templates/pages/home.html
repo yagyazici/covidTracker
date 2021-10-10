@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% load static %}
+{% block content %}
+    <div class="main d-grid gap-3">
+        <div class="container bg-danger rounded">
+            <div class="row">
+                <div class="col my-auto">
+                    <div class="d-flex justify-content-center">
+                        <img src="{% static 'images/virus.png' %}" alt="" class="my-auto" style="width: 12rem;">
+                        <h1 class="ms-3 text-white display-3 my-auto">Covid-19 Stats</h1>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-flex justify-content-evenly my-5">
+                        <a href="{% url 'europe' %}" class="text-dark" style="text-decoration: none;">
+                            <div class="card text-center">
+                                <img src="{% static 'images/europe.png' %}" style="width: 12rem;" class="card-img-top p-1" alt="Africa">
+                                <h5 class="card-title mt-1">Europe</h5>
+                            </div>
+                        </a>
+                        <a href="{% url 'asia' %}" class="text-dark" style="text-decoration: none;">
+                            <div class="card text-center">
+                                <img src="{% static 'images/asia.png' %}" style="width: 12rem;" class="card-img-top p-1" alt="Africa">
+                                <h5 class="card-title mt-1">Asia</h5>
+                            </div>
+                        </a>
+                        <a href="{% url 'africa' %}" class="text-dark" style="text-decoration: none;">
+                            <div class="card text-center">
+                                <img src="{% static 'images/africa.png' %}" style="width: 12rem;" class="card-img-top p-1" alt="Africa">
+                                <h5 class="card-title mt-1">Africa</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-evenly pb-5">
+                        <a href="{% url 'australia-oceania' %}" class="text-dark" style="text-decoration: none;">
+                            <div class="card text-center">
+                                <img src="{% static 'images/australia.png' %}" style="width: 12rem;" class="card-img-top p-1" alt="Africa">
+                                <h5 class="card-title mt-1">Australia-Oceania</h5>
+                            </div>
+                        </a>
+                        <a href="{% url 'north-america' %}" class="text-dark" style="text-decoration: none;">
+                            <div class="card text-center">
+                                <img src="{% static 'images/north-america.png' %}" style="width: 12rem;" class="card-img-top p-1"
+                                    alt="Africa">
+                                <h5 class="card-title mt-1">North America</h5>
+                            </div>
+                        </a>
+                        <a href="{% url 'south-america' %}" class="text-dark" style="text-decoration: none;">
+                            <div class="card text-center">
+                                <img src="{% static 'images/south-america.png' %}" style="width: 12rem;" class="card-img-top p-1"
+                                    alt="Africa">
+                                <h5 class="card-title mt-1">South America</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container bg-white rounded mb-3">
+            <div class="my-3 text-center">
+                <div class="container">
+                    <h1>Covid-19 Cases:</h1>
+                    <h1 class="text-info"><span><strong>{{world.cases|intcomma}}</strong></span></h1>
+                </div>
+                <div class="container">
+                    <h1>Death:</h1>
+                    <h1 class="text-danger"><span><strong>{{world.deaths|intcomma}}</strong></span></h1>
+                </div>
+                <div class="container">
+                    <h1>Recovered:</h1>
+                    <h1 class="text-success"><span><strong>{{world.recovered|intcomma}}</strong></span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

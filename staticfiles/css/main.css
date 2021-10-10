@@ -1,0 +1,41 @@
+.main{
+  margin-top: 100px;
+}
+.country-list{
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+#container{
+  position: relative;
+  width: 15rem;
+}
+#image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease-in-out;
+  background-color: rgba(0, 0, 0, .2);
+}
+#container:hover #overlay {
+  opacity: 1;
+}
+#text {
+  color: white;
+  font-size: x-large;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
